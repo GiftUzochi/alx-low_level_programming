@@ -1,21 +1,20 @@
 #include "lists.h"
 
 /**
- * print_lists - fxn to add a newnode at the beginning
- * @h: the head of the linkedlist
- * @str: the string to add
- * Return: the address of the new node
+ * add_node - fxn to add a newnode at the beginning
+ * @head: the head of the linkedlist
+ * @str: the string to add_node to the element
+ * Return: the address of ptr
  */
-
-list_t *add_node(list_t **head, const char *str);
+list_t *add_node(list_t **head, const char *str)
 {
-	list * new head = malloc (sizeof (node));
-	"first *newhead" = Null;
+	list_t *new_head = malloc(sizeof(list_t));
+
+	if (new_head == NULL)
 	return (NULL);
-	new * head->str = strdup(str);
-	new * head->len = strlen(str);
-	new * head->next = *head
-		return (new head);
+	new_head->str = strdup(str);
+	new_head->len = strlen(str);
+	new_head->next = *head;
+
+	return (new_head);
 }
-
-
