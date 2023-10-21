@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * empty_list - function that frees a list_t list
+ * free_list - function that frees a list_t list
  * @head: list_t to be freed
  * Return: 0
  */
