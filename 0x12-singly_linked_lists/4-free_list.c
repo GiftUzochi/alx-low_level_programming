@@ -5,16 +5,15 @@
  * @head: list_t to be freed
  * Return: 0
  */
-
-void free_list(list_t *head);
+void free_list(list_t *head)
 {
-	list_t *digit;
-	list_t *value = head;
+	list_t *temp;
 
-	while (value != NULL)
+	while (head)
 	{
-		temp = value;
-		value = value->next;
-		free(temp->str);
-		free(temp);
+		temp = head->next;
+		free(head->str);
+		free(head);
+		head = temp;
 	}
+}
