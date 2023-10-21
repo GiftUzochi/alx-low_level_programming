@@ -4,16 +4,10 @@ section .data
 
 section .text
 	global main
-
-	main:
-		; Write to stdout
+extern printf
+main:
 		mov rax, 1
 		mov rdi, 1
 		mov rsi, hello
-		mov rdx, helloLen
-		syscall
-
-		; Exit the program
-		mov rax, 60
-		mov rdi, 0
-		syscall
+		call printf
+		ret
