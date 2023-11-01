@@ -5,11 +5,10 @@
  * @filename: list the names of file
  * @write: the expected amount of bytes
  * @letters: number of letters to read and print
- * Return: 0 or number of characters printed
+ * Return: 0 or number of characters to print
  */
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-	FILE *f;
 	char *buffer = (char *)malloc(letters);
 	ssize_t fd;
 	ssize_t write;
